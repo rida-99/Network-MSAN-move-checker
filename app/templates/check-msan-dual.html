@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>MSAN Dual</h2>
+
+<form method="POST" action="/msan-migration-check">
+  <div>
+    <h3>MSAN Parameters</h3>
+
+    <label>MSAN Bandwidth (Go)</label>
+    <input type="number" name="my_bw" value="6" step="0.01" required />
+
+    <label>MSAN Charge (%)</label>
+    <input type="number" name="my_charge" value="60" step="0.01" required />
+  </div>
+
+  <br />
+
+  <div>
+    <h3>AG to Peer Parameters</h3>
+
+    <label>AG1 to Peer Bandwidth (Go)</label>
+    <input type="number" name="peer1_bw" value="20" step="0.01" required />
+
+    <label>AG1 to Peer Charge (%)</label>
+    <input type="number" name="peer1_charge" value="40" step="0.01" required />
+
+    <label>AG2 to Peer Bandwidth (Go)</label>
+    <input type="number" name="peer2_bw" value="20" step="0.01" required />
+
+    <label>AG2 to Peer Charge (%)</label>
+    <input type="number" name="peer2_charge" value="34" step="0.01" required />
+  </div>
+
+  <button type="submit">Check Move</button>
+</form>
+
+{% endblock %}

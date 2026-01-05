@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="result-container">
+  <h2>Migration Check Result</h2>
+
+  <div class="result-card">
+    <div class="result-metrics">
+      <div class="metric">
+        <label>Peer 1 New Charge</label>
+        <div class="metric-value">{{ result.peer1_new }}%</div>
+      </div>
+      <div class="metric">
+        <label>Peer 2 New Charge</label>
+        <div class="metric-value">{{ result.peer2_new }}%</div>
+      </div>
+    </div>
+
+    <div class="result-status">
+      {% if result.can_move %}
+      <div class="status-success">
+        <div class="status-icon">✓</div>
+        <h3>Move is Possible</h3>
+        <p>YES – The migration can be safely executed.</p>
+      </div>
+      {% else %}
+      <div class="status-error">
+        <div class="status-icon">✗</div>
+        <h3>Move is NOT Safe</h3>
+        <p>NO – The migration cannot be performed at this time.</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="actions">
+      <a href="/" class="btn-back">← Back to Selection</a>
+    </div>
+  </div>
+</div>
+
+<style>
+</style>
+
+{% endblock %}

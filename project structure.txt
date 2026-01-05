@@ -1,0 +1,28 @@
+network-move-checker/
+│
+├── app/
+│   ├── __init__.py
+│   │
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   └── result.html
+│   │
+│   ├── routes/
+│   │   └── main.py
+│   │
+│   ├── logs/
+│   │   └── app.log
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── styles.css
+│   │   ├── js/
+│   │   │   └── scripts.js
+│   │   └── img/
+│   │
+│   ├── utils/
+│   │   └── predictor.py
+│
+└── run.py
+

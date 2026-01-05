@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+  <h2>MSAN Migration Check</h2>
+  <p class="subtitle">Select the migration type you want to check</p>
+
+  <div class="options-grid">
+    <!-- MSAN Single Option -->
+    <a href="/msan-single-migration" class="option-card">
+      <div class="option-icon"></div>
+      <h3>MSAN Single</h3>
+      <p>Check migration for single MSAN</p>
+      <span class="btn-start">Start →</span>
+    </a>
+
+    <!-- MSAN Dual Option -->
+    <a href="/msan-dual-migration" class="option-card">
+      <div class="option-icon"></div>
+      <h3>MSAN Dual</h3>
+      <p>Check migration for dual MSAN</p>
+      <span class="btn-start">Start →</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  
+</style>
+
+{% endblock %}
